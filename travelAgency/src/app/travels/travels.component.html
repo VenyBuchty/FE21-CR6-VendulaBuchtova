@@ -1,1 +1,24 @@
-<p>travels works!</p>
+
+<div class="row row-cols-1 row-cols-md-2  g-4">
+    <div class="col" *ngFor="let offer of travelOffers">
+        <div class="card">
+            <img src="{{offer.img}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title">{{offer.name}}</h3>
+                <h5 class="card-text">{{offer.destination}}</h5>
+                <p class="card-text">{{offer.description}}</p>
+                <div class="d-flex mt-auto bd-highlight  align-items-center justify-content-between">
+                    <div class="p-2 bd-highlight">
+                            <p class="card-text fw-bold">Start Date: {{offer.startDate}}</p>
+                            <p class="card-text fw-bold">Duration: {{offer.duration}}</p>
+                            <h4 class="card-text fw-bold price">Price: {{offer.price}}</h4>
+                    </div>
+                    <div class="p-2 bd-highlight">
+                            <button type="button" class="btn btn-dark">Offer</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
