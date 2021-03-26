@@ -1,0 +1,21 @@
+.heroimg {
+  width: 100%;
+  height: 480px;
+  background: url("/assets/img/hero3-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 0 0 10px 10px;
+}
+
+.text-content {
+  padding-top: 5rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px #333;
+  i {
+    font-family: "Dancing Script", cursive;
+    font-size: 4rem;
+  }
+}
