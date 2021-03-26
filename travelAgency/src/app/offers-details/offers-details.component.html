@@ -1,0 +1,40 @@
+<button class="btn btn-dark mt-5 button-back" (click)="goBack()">Go Back</button>
+<div class="card mb-3" *ngIf="product">
+    <img src="{{ product.img }}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h2 class="card-title">{{ product.name }}</h2>
+        <h4 class="card-text">{{ product.destination }}</h4>
+        <p class="card-text mt-4">{{ product.description }}</p>
+        <hr>
+        <div class="d-flex mt-auto bd-highlight  align-items-center justify-content-between">
+            <div class="p-2 bd-highlight">
+                <p class="card-text fw-bold ">Start Date: {{product.startDate}}</p>
+                <p class="card-text fw-bold">Duration: {{product.duration}}</p>
+                <h4 class="card-text fw-bold price">Price: {{product.price | currency}} /person</h4>
+            </div>
+            <div class="p-2 bd-highlight">
+                <button (click)="addToCart(product)" type="button" class="btn btn-dark button-reserve">Reserve</button>
+        </div>
+</div>
+
+
+
+
+
+
+
+<!-- <div class="card mb-3" *ngIf="product">
+    <img src="{{ product.img }}" class="card-img-top" alt="...">
+    <div class="card-body">
+        
+        
+    </div>
+    
+</div> -->
+
+<!-- <h5 class="card-title">{{ product.name }}</h5>
+<p class="card-text">{{ product.description }}</p>
+<p class="card-text">{{ product.startDate }}</p>
+<p class="card-text">{{ product.duration }}</p>
+<p class="card-text">{{ product.price }}</p>
+<a class="btn btn-primary button-more" routerLink="/products/{{productId}}" role="button">Read More</a> -->

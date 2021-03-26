@@ -10,7 +10,7 @@
   }
 }
 
-h3 {
+h2 {
   font-weight: 800;
   color: rgb(7, 78, 78);
 }
@@ -19,7 +19,13 @@ h4 {
   color: rgb(30, 88, 88);
 }
 
-.button-more {
+.button-back {
+  background: rgb(54, 54, 54);
+  border-radius: 10px 10px 0 0;
+  margin-bottom: -3rem;
+}
+
+.button-reserve {
   height: 3rem;
   width: 13rem;
   background-color: #1eb662;
