@@ -2,7 +2,7 @@
 
 <div class="row">
     <div class="col">
-        <table class="table" >
+        <table class="table">
             <thead>
                 <h3 class="mt-3 mx-1">Cart:</h3>
             <tr>
@@ -24,16 +24,45 @@
             </tbody>
             <thead>
                 <tr>
-                    <th scope="col"><h3>TOTAL:</h3></th>
+                    <th scope="col"><h5>TOTAL:</h5></th>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td>
-                        <h1>{{cartTotal| currency}}</h1>
+                        <h2>{{cartTotal| currency}}</h2>
+                    </td>
+                </tr>
+            </thead>
+            <thead [style.color]="cartSale > 0 ? 'red':'black'">
+                <ng-template [ngIf]="cartSale > 0" [ngIfElse]="none">
+                    <tr>
+                        <th scope="col">
+                            <h3>After Sale:</h3>
+                        </th>
+                        <td></td>
+                        <td></td>
+                        <td><h5>{{discountAmount}}</h5></td>
+                        <td>
+                            <h1>{{cartSale| currency}}</h1>
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template #none>
+                </ng-template>
+            </thead>
+            <thead>
+                <tr>
+                    <th class="pb-3">Please fill:</th>
+                    <td><input type="firstName" class="form-control" aria-describedby="firstName" placeholder="First name"></td>
+                    <td><input type="lastName" class="form-control" aria-describedby="lastName" placeholder="Last name"></td>
+                    <td><input type="email" class="form-control" aria-describedby="email" placeholder="E-mail"></td>
+                    <td>
+                        <button type="submit"  class="btn btn-dark button-submit" (click)="preOrder()">Pre-order</button>
                     </td>
                 </tr>
             </thead>
         </table>
+        
     </div>
 </div>
 

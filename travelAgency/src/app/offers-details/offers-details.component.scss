@@ -37,3 +37,12 @@ h4 {
     background-color: #65cf95;
   }
 }
+
+@media screen and (max-width: 476px) {
+  .button-reserve {
+    height: 2rem;
+    width: 10rem;
+
+    font-size: 1rem;
+  }
+}
