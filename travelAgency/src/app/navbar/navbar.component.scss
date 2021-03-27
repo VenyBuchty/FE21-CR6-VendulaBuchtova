@@ -22,3 +22,15 @@ button {
   font-weight: 500;
   font-style: italic;
 }
+
+@media screen and (max-width: 991px) {
+  .navbar-nav {
+    li {
+      flex-direction: row;
+      font-size: 0.8rem;
+    }
+  }
+  button {
+    font-size: 0.8rem;
+  }
+}
